@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170d2b">
+<title>Joy's 23rd Birthday ✨</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="sparkles" aria-hidden="true"></div>
+<main class="wrap">
+<nav aria-label="Page sections"><a href="#home">Home ✨</a><a href="#joy-photo">Joy's Photo 💖</a><a href="#mystery">Mystery Gifts 🎁</a><a href="#letter">Birthday Letter 💌</a></nav>
+<!-- Quick access to cake: prominent button -->
+<div style="text-align:center;margin-top:8px"><a href="#cake" class="pill" style="background:linear-gradient(90deg,#ffb6d9,#9b5cff);border:1px solid #ffffff22">Blow The Candles 🎂</a></div>
+<header id="home">
+<div class="eyebrow">A little birthday magic ✨</div>
+<h1>Happy 23rd Birthday,<br><span>Joy</span> 💖</h1>
+<p class="sub">Our firstborn, our "foodie", and occasionally our tiny thunderstorm 😂. You give so much to everyone around you. Today, it's your DAY!!!.</p>
+<div class="pill">✦ Made with love, just for you ✦</div>
+</header>
+
+<section class="panel" id="joy-photo" aria-labelledby="photo-heading">
+<div class="photo-layout">
+<div class="photo-frame">
+	<img id="joyPhoto" src="joy-photo.jpg" alt="A photo of Joy" onload="document.getElementById('photoPlaceholder').style.display='none'" onerror="this.style.display='none'" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;background:#29183c">
+	<div class="photo-placeholder" id="photoPlaceholder"><span class="initial">J</span><strong>Joy's special day</strong><small>Add her photo here to make this page truly hers.</small></div>
+</div>
+<div class="photo-copy">
+<div class="eyebrow">The birthday girl</div>
+<h2 id="photo-heading">Our beautiful Joy 🌷</h2>
+<p class="tagline">“You make life brighter just by being you.”</p>
+<p>Firstborn, big-hearted sister, family supporter, foodie, and the one who can make us laugh — even if we occasionally need to wait for the short-tempered weather to pass. 😂❤️</p>
+<p>This little corner is just for you, Joy. You deserve to be celebrated today and every day.</p>
+	<div class="photo-actions">
+	<!-- Local image is shown in the frame above if present. -->
+	</div>
+</div>
+</div>
+</section>
+
+<section class="panel" id="mystery" aria-labelledby="game-title">
+<h2 id="game-title">Joy's Mystery Gift Game 🎁</h2>
+<p class="panel-intro">Four mystery boxes. Choose one box to reveal the surprise — the game is a one-time play. No peeking! 👀</p>
+<div style="text-align:center;margin-bottom:12px">
+	<button class="btn btn-secondary" id="soundToggle" type="button" aria-pressed="false">Enable sound effects 🔔</button>
+</div>
+<div class="boxes" id="giftBoxes">
+<button class="gift-box" data-gift="headphones" aria-label="Open mystery gift box one"><span class="box-emoji">🎁</span><span class="box-label">MYSTERY BOX 01</span><span class="box-hint">Tap to reveal ✨</span></button>
+<button class="gift-box" data-gift="chicken" aria-label="Open mystery gift box two"><span class="box-emoji">🎁</span><span class="box-label">MYSTERY BOX 02</span><span class="box-hint">Tap to reveal ✨</span></button>
+<button class="gift-box" data-gift="pizza" aria-label="Open mystery gift box three"><span class="box-emoji">🎁</span><span class="box-label">MYSTERY BOX 03</span><span class="box-hint">Tap to reveal ✨</span></button>
+<button class="gift-box" data-gift="hoodie" aria-label="Open mystery gift box four"><span class="box-emoji">🎁</span><span class="box-label">MYSTERY BOX 04</span><span class="box-hint">Tap to reveal ✨</span></button>
+</div>
+<div class="result" id="result" aria-live="polite">
+<div class="big" id="resultEmoji">🎉</div><h3 id="resultTitle">Surprise!</h3><p id="resultMessage"></p><p class="small-note" id="resultNote"></p>
+<!-- Single-play: no replay controls. -->
+</div>
+</section>
+
+<!-- Cake Section (stylized cinematic cake & candle illustration) -->
+<section class="panel" id="cake" aria-labelledby="cake-title">
+	<h2 id="cake-title">Blow The Candles 🎂</h2>
+	<p class="panel-intro">A dreamy, movie-like birthday cake with candle numbers <strong>2</strong> and <strong>3</strong>. Click "Blow Candles" or use the microphone to extinguish them and trigger a cheerful celebration.</p>
+	<div class="cake-scene-wrap">
+		<div id="cakeScene" class="cake-scene" aria-hidden="false">
+			<div class="cake-illustration">
+				<div class="cake-top">
+					<div class="icing icing-top"></div>
+					<div class="cake-candles">
+						<div class="candle candle-left">
+							<span class="flame">✦</span>
+							<span class="num">2</span>
+						</div>
+						<div class="candle candle-right">
+							<span class="flame">✦</span>
+							<span class="num">3</span>
+						</div>
+					</div>
+				</div>
+				<div class="cake-middle"></div>
+				<div class="cake-bottom"></div>
+			</div>
+		</div>
+		<button class="btn btn-primary" id="blowBtn" type="button" style="position:relative;display:block;margin:14px auto;">Blow Candles 🎐</button>
+		<div style="text-align:center"><button class="btn btn-secondary" id="micToggle" type="button" aria-pressed="false">Use Microphone to Blow 🎤</button></div>
+	</div>
+</section>
+
+<section class="letter" id="letter">
+<p>Dear Joy, thank you for being there for us emotionally and financially, for your selfless heart, and for making home brighter with your jovial spirit. You don't always have to be the strong one. You deserve care, rest, laughter, good food, and beautiful things too.</p>
+<p><strong>May 23 bring you more joy than you've given the rest of us.</strong> We love you endlessly. ❤️</p>
+</section>
+<footer>Made for Joy, with love and a little sibling mischief 💗</footer>
+</main>
+<script src="script.js" defer></script>
+</body>
+</html>
